@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Ninjas from './Ninjas';
 
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
       <div className="App">
        <h1>Idemo na MUP</h1>
        <p>Welcome!</p>
+       <Ninjas />
       </div>
     );
   }
