@@ -3,6 +3,7 @@ import Ninjas from './Ninjas';
 import AddNinja from './AddNinja';
 
 
+
 class App extends Component {
 state = {
   ninjas : [
@@ -12,13 +13,21 @@ state = {
   ]
 }
 
+addNinja = (ninja) => {
+ninja.id = Math.random();
+let ninjas = [...this.state.ninjas, ninja];
+this.setState({
+  ninjas: ninjas
+})
+}
+
   render() {
     return (
       <div className="App">
        <h1>Idemo na MUP</h1>
        <p>Welcome!</p>
        <Ninjas ninjas={this.state.ninjas}/>
-       <AddNinja />
+       <AddNinja addNinja={this.addNinja}/>
       </div>
     );
   }
